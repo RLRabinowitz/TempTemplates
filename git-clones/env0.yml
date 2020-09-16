@@ -6,7 +6,7 @@ deploy:
             - mkdir without
             - cd without
             - git clone https://github.com/kubernetes/kubernetes
-            - cd repo-with-large-file-storage
+            - cd kubernetes
             - git checkout master
             - git submodule update --init --recursive --jobs 2
             - cd ../..
@@ -14,7 +14,7 @@ deploy:
             - mkdir with
             - cd with
             - git clone https://github.com/kubernetes/kubernetes --no-single-branch --depth=1
-            - cd repo-with-large-file-storage
+            - cd kubernetes
             - git fetch --prune --no-recurse-submodules --depth=1 origin master
             - git checkout master
             - git submodule update --depth=1 --init --recursive --jobs 2

@@ -1,7 +1,7 @@
 version: 1
 deploy:
     steps:
-        setupVariables:
+        terraformInit:
           before:
             - brew install git-lfs
             - mkdir without

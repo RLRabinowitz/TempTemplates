@@ -3,13 +3,9 @@ deploy:
     steps:
         terraformInit:
           before:
-            - apk add openssl --update-cache
-            - wget -qO- https://github.com/git-lfs/git-lfs/releases/download/v2.1.1/git-lfs-linux-amd64-2.1.1.tar.gz | tar xz
-            - mv git-lfs-*/git-lfs /usr/bin/ && rm -rf git-lfs-* && git lfs install && git lfs pull
             - mkdir without
             - cd without
-            - git lfs install
-            - git clone https://github.com/RLRabinowitz/repo-with-large-file-storage
+            - git clone https://github.com/kubernetes/kubernetes
             - cd repo-with-large-file-storage
             - git checkout master
             - git submodule update --init --recursive --jobs 2
@@ -17,8 +13,7 @@ deploy:
           after:
             - mkdir with
             - cd with
-            - git lfs install
-            - git clone https://github.com/RLRabinowitz/repo-with-large-file-storage --no-single-branch --depth=1
+            - git clone https://github.com/kubernetes/kubernetes --no-single-branch --depth=1
             - cd repo-with-large-file-storage
             - git fetch --prune --no-recurse-submodules --depth=1 origin master
             - git checkout master

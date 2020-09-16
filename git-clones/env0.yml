@@ -3,7 +3,7 @@ deploy:
     steps:
         terraformInit:
           before:
-            - brew install git-lfs
+            - curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.node.sh | bash
             - mkdir without
             - cd without
             - git lfs install

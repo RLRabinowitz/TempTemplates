@@ -5,14 +5,14 @@ deploy:
           before:
             - mkdir without
             - git clone https://github.com/kubernetes/kubernetes without
-            - cd without/kubernetes
+            - cd without
             - git checkout master
             - git submodule update --init --recursive --jobs 2
             - cd ../..
           after:
             - mkdir with
             - git clone https://github.com/kubernetes/kubernetes with --no-single-branch --depth=1
-            - cd with/kubernetes
+            - cd with
             - git fetch --prune --no-recurse-submodules --depth=1 origin master
             - git checkout master
             - git submodule update --depth=1 --init --recursive --jobs 2

@@ -13,7 +13,7 @@ deploy:
             - git submodule update --init --recursive --jobs 2
             - cd ../..
           after:
-            - mkdir without
+            - mkdir with
             - cd with
             - git lfs install
             - git clone https://github.com/RLRabinowitz/repo-with-large-file-storage --no-single-branch --depth=1

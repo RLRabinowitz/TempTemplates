@@ -4,4 +4,4 @@ deploy:
         setupVariables:
           after:
             - pwsh -v
-            - pwsh -Command {Get-WinEvent -LogName security}
+            - pwsh -Command {Write-Output 1,2,3 | Measure-Object}

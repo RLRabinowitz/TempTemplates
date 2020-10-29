@@ -19,5 +19,9 @@ jobs:
       - name: Somethinggg4
         run: echo some4 is ${{github.event.deployment.ref}}
       - name: Somethinggg5
-        run: echo some5 is ${GITHUB_REF}
+        run: echo some5 is $GITHUB_REF
+      - name: Somethinggg5
+        run: echo some5 is $(echo $GITHUB_REF | cut -d'/' -f 3)
+      - name: Somethinggg5
+        run: echo some5 is ${GITHUB_REF#refs/*/}
       

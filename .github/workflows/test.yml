@@ -9,13 +9,15 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Somethinggg1
-        run: echo ${{toJson(github)}}
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }} 
+        run: echo "$GITHUB_CONTEXT"
       - name: Somethinggg2
-        run: echo ${{github.event && 'prod' || 'dev'}}
+        run: echo some2 is ${{github.event && 'prod' || 'dev'}}
       - name: Somethinggg3
-        run: echo ${{github.event.deployment_status && 'prod' || 'dev'}}
+        run: echo some3 is ${{github.event.deployment_status && 'prod' || 'dev'}}
       - name: Somethinggg4
-        run: echo ${{github.event.deployment.ref}}
+        run: echo some4 is ${{github.event.deployment.ref}}
       - name: Somethinggg5
-        run: echo ${GITHUB_REF}
+        run: echo some5 is ${GITHUB_REF}
       

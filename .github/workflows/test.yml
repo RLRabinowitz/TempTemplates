@@ -1,7 +1,7 @@
 name: Test
 on:
   schedule:
-    - cron:  '1 * * * *'
+    - cron:  '3 * * * *'
 jobs:
   something:
     name: Something
@@ -9,5 +9,5 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: Somethinggg
-        run: echo ${{github.event}}
+        run: echo ${{toJson(github)}}
       

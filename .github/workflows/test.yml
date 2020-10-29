@@ -17,7 +17,9 @@ jobs:
       - name: Somethinggg4
         run: echo ${{github.event.deployment.ref}}
       - name: Somethinggg5
-        run: echo ${{GITHUB_REF}}
+        run: echo ${GITHUB_REF}
       - name: Somethinggg6
         run: echo ${{github.event.deployment.ref && GITHUB_REF}}
+      - name: Somethinggg7
+        run: echo ${{GITHUB_REF}}
       

@@ -1,0 +1,12 @@
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+jobs:
+  something:
+    name: Something
+    runs-on: ubuntu-16.04
+    timeout-minutes: 30
+    steps:
+      - name: Somethinggg
+        run: echo ${{github.event}}
+      

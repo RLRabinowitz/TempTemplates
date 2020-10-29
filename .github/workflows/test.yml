@@ -20,8 +20,12 @@ jobs:
         run: echo some4 is ${{github.event.deployment.ref}}
       - name: Somethinggg5
         run: echo some5 is $GITHUB_REF
-      - name: Somethinggg5
+      - name: Somethinggg6
         run: echo some5 is $(echo $GITHUB_REF | cut -d'/' -f 3)
-      - name: Somethinggg5
+      - name: Somethinggg7
         run: echo some5 is ${GITHUB_REF#refs/*/}
+      - name: Somethinggg8
+        env:
+          SOMETHINGG: ${{ toJson(env) }} 
+        run: echo "$SOMETHINGG"
       

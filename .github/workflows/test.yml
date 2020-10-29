@@ -10,4 +10,8 @@ jobs:
     steps:
       - name: Somethinggg
         run: echo ${{toJson(github)}}
+      - name: Somethinggg
+        run: echo ${{github.event && 'prod' || 'dev'}}
+      - name: Somethinggg
+        run: echo ${{github.event.deployment_status && 'prod' || 'dev'}}
       

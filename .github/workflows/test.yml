@@ -2,11 +2,15 @@ name: Test
 on:
   schedule:
     - cron:  '*/5 * * * *'
+env:
+  YES: yes 
 jobs:
   something:
     name: Something
     runs-on: ubuntu-16.04
     timeout-minutes: 30
+    env:
+      ANSWER: answer/${{ env.YES }} 
     steps:
       - name: Somethinggg1
         env:
@@ -28,4 +32,6 @@ jobs:
         env:
           SOMETHINGG: ${{ toJson(env) }} 
         run: echo "$SOMETHINGG"
+      - name: Somethinggg9
+        run: echo "$ANSWER"
       

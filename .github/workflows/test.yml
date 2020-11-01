@@ -13,7 +13,7 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }} 
         run: echo "$GITHUB_CONTEXT"
       - name: Somethinggg2
-        run: echo some2 is ${{github.event && 'prod' || 'dev'}}
+        run: echo some2 is ${{github.event.schedule && 'prod' || 'dev'}}
       - name: Somethinggg3
         run: echo some3 is ${{github.event.deployment_status && 'prod' || 'dev'}}
       - name: Somethinggg4

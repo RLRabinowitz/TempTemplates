@@ -9,8 +9,6 @@ jobs:
     name: Something
     runs-on: ubuntu-16.04
     timeout-minutes: 30
-    env:
-      ANSWER: answer/${{ env.YES }} 
     steps:
       - name: Somethinggg1
         env:
@@ -38,4 +36,12 @@ jobs:
         run: echo some2 is ${{github.event.schedule || 'prod'}}
       - name: Somethinggg11
         run: echo some3 is ${{github.event.deployment_status || 'prod'}}
+      - name: setenv1
+        run: echo "::set-env name=KKKKK::LLLLL"
+      - name: useenv1
+        run: echo "$KKKKK"
+      - name: setenv2
+        run: echo "MMMMM=LLLLL" >> $GITHUB_ENV
+      - name: useenv2
+        run: echo "$MMMMM"
       

@@ -34,4 +34,8 @@ jobs:
         run: echo "$SOMETHINGG"
       - name: Somethinggg9
         run: echo "$ANSWER"
+      - name: Somethinggg10
+        run: echo some2 is ${{github.event.schedule || 'prod'}}
+      - name: Somethinggg11
+        run: echo some3 is ${{github.event.deployment_status || 'prod'}}
       

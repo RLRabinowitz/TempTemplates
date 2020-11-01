@@ -44,4 +44,12 @@ jobs:
         run: echo "MMMMM=LLLLL" >> $GITHUB_ENV
       - name: useenv2
         run: echo "$MMMMM"
+      - name: setcompenv1
+        run: echo "::set-env name=KKKKK2::https://$KKKKK.com"
+      - name: setcompenv2
+        run: echo "MMMMM2=https://$MMMMM" >> $GITHUB_ENV
+      - name: usecompenv1
+        run: echo "$KKKKK2"
+      - name: usecompenv2
+        run: echo "$MMMMM2"
       

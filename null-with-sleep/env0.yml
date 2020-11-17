@@ -4,6 +4,6 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - echo "Sleeping......"
+        - echo "Sleeping...."
         - sleep 1
         - echo "Good morning!"

@@ -1,2 +1,3 @@
-resource "null_resource" "nully" {
+terraform {
+  source = "main.tf"
 }

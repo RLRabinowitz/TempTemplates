@@ -1,3 +1,3 @@
 terraform {
-  path = "my_bucket.tf"
+  path = "my_buckets.tf"
 }

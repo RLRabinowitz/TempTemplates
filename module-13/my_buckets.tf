@@ -1,6 +1,6 @@
 # my_buckets.tf
 module "bucket" {
-  for_each = toset(["arel_temp_assets", "arel_temp_media"])
+  for_each = toset(["arel-temp-assets", "arel-temp-media"])
   source   = "./publish_bucket"
-  name     = "${each.key}_bucket"
+  name     = "${each.key}-bucket"
 }

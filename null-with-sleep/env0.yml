@@ -7,4 +7,3 @@ deploy:
         - echo "KAKI-MASTER....."
         - sleep 1
         - echo "Good morning!"
-        - failz

@@ -5,3 +5,9 @@ deploy:
     setupVariables:
       after: 
         - failz
+
+destroy:
+  steps:
+    setupVariables:
+      after: 
+        - failz

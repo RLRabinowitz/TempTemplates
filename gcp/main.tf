@@ -5,7 +5,7 @@ provider "google" {
 }
 
 resource "google_compute_instance" "google-i" {
-  name         = "gcp-test"
+  name         = "gcp-test-test"
   machine_type = "n1-standard-1"
 
   boot_disk {

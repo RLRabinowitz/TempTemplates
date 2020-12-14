@@ -1,4 +1,11 @@
-resource "null_resource" "previous" {}
+resource "null_resource" "previous" {
+  triggers = null_resource.previous.next === "dog" ? {} : file("assertion failed!")
+  lifecycle {
+      ignore_changes = [
+          triggers
+      ]
+  }
+}
 
 resource "time_sleep" "wait_10_seconds" {
   depends_on = [null_resource.previous]

@@ -1,5 +1,5 @@
 resource "null_resource" "previous" {
-  triggers = null_resource.previous.next === "dog" ? {} : file("assertion failed!")
+  triggers = null_resource.next.name === "dog" ? {} : file("assertion failed!")
   lifecycle {
       ignore_changes = [
           triggers

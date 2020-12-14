@@ -1,10 +1,5 @@
 resource "null_resource" "previous" {
   triggers = null_resource.next.name == "dog" ? {} : file("assertion failed!")
-  lifecycle {
-      ignore_changes = [
-          triggers
-      ]
-  }
 }
 
 resource "time_sleep" "wait_10_seconds" {

@@ -1,5 +1,5 @@
 resource "null_resource" "previous" {
-  triggers = null_resource.next.name == "dog" ? {} : file("assertion failed!")
+  triggers = "cat" == "dog" ? {} : file("assertion failed!")
 }
 
 resource "time_sleep" "wait_10_seconds" {

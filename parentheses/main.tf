@@ -1,4 +1,4 @@
-resource "kubernetes_deployment" "audit_server" {
+resource "google_pubsub_topic" "audit_topic" {
   metadata {
     name = "terraform-example"
   }
@@ -8,7 +8,4 @@ resource "kubernetes_deployment" "audit_server" {
       type = local.kubernetes_deployment_strategy_rolling_update
     }
   }
-}
-
-resource "google_pubsub_topic" "audit_topic" {
 }

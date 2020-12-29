@@ -9,3 +9,6 @@ resource "kubernetes_deployment" "audit_server" {
     }
   }
 }
+
+resource "google_pubsub_topic" "audit_topic" {
+}

@@ -1,8 +1,11 @@
-resource "kubernetes_deployment" "k" {
+resource "kubernetes_deployment" "audit_server" {
+  metadata {
+    name = "terraform-example"
+  }
   spec {
-    replicas = true ? 0 : (false ? 1 : 2)
+    replicas = var.pre_migration_scale_down_mode_enabled ? 0 : (var.minimal_setup_enabled ? local.minimal_setup_replicas : 1)
     strategy {
-      type = "whatever"
+      type = local.kubernetes_deployment_strategy_rolling_update
     }
   }
 }

@@ -6,4 +6,4 @@ deploy:
       after: 
         - echo "KAKI-MASfTE...."
         - sleep 2
-        - echo "Good morning!"
+        - echo "Good morning!" asdasdsdsdsfsffglajdfmnadlgkjbvadbgvldazkf skdas

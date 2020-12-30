@@ -4,6 +4,6 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - echo "KAKI-MASTER...."
+        - echo "KAKI-MASTER......"
         - sleep 2
         - echo "Good morning!"

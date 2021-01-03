@@ -10,46 +10,20 @@ jobs:
     runs-on: ubuntu-16.04
     timeout-minutes: 30
     steps:
-      - name: Somethinggg1
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }} 
-        run: echo "$GITHUB_CONTEXT"
-      - name: Somethinggg2
-        run: echo some2 is ${{github.event.schedule && 'prod' || 'dev'}}
-      - name: Somethinggg3
-        run: echo some3 is ${{github.event.deployment_status && 'prod' || 'dev'}}
-      - name: Somethinggg4
-        run: echo some4 is ${{github.event.deployment.ref}}
-      - name: Somethinggg5
-        run: echo some5 is $GITHUB_REF
-      - name: Somethinggg6
-        run: echo some5 is $(echo $GITHUB_REF | cut -d'/' -f 3)
-      - name: Somethinggg7
-        run: echo some5 is ${GITHUB_REF#refs/*/}
-      - name: Somethinggg8
-        env:
-          SOMETHINGG: ${{ toJson(env) }} 
-        run: echo "$SOMETHINGG"
-      - name: Somethinggg9
-        run: echo "$ANSWER"
-      - name: Somethinggg10
-        run: echo some2 is ${{github.event.schedule || 'prod'}}
-      - name: Somethinggg11
-        run: echo some3 is ${{github.event.deployment_status || 'prod'}}
-      - name: setenv1
-        run: echo "::set-env name=KKKKK::LLLLL"
-      - name: useenv1
-        run: echo "$KKKKK"
-      - name: setenv2
-        run: echo "MMMMM=LLLLL" >> $GITHUB_ENV
-      - name: useenv2
-        run: echo "$MMMMM"
-      - name: setcompenv1
-        run: echo "::set-env name=KKKKK2::https://$KKKKK.com"
-      - name: setcompenv2
-        run: echo "MMMMM2=https://$MMMMM" >> $GITHUB_ENV
-      - name: usecompenv1
-        run: echo "$KKKKK2"
-      - name: usecompenv2
-        run: echo "$MMMMM2"
-      
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
+
+      - uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 0.13.4
+      - name: run terraform init
+        run: |
+            cd module-13 && terraform init
+
+      - uses: env0/terratag-action@v2
+        with:
+          tags: |
+            {
+              "env0_environment_id":"40907eff-cf7c-419a-8694-e1c6bf1d1168","env0_project_id":"43fd4ff1-8d37-4d9d-ac97-295bd850bf94"
+            }
+          dir: module-13 

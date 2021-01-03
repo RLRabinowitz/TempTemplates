@@ -28,5 +28,5 @@ jobs:
           
       - name: check
         run: |
-            cd module-13
+            cd module-13/publish_bucket
             ls -l

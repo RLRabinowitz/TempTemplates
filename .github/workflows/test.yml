@@ -26,9 +26,7 @@ jobs:
             }
           dir: module-13 
           
-      - name: pwd
+      - name: check
         run: |
-            pwd
-      - name: ll
-        run: |
+            cd module-13
             ls -l

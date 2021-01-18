@@ -8,7 +8,7 @@ module "vpc" {
   version = "2.66.0"
   name                 = "vpc-name-tempo"
   cidr                 = "10.0.0.0/16"
-  azs                  = ["us-east-1"]
+  azs                  = ["us-east-1a"]
   private_subnets      = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
   public_subnets       = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
   enable_nat_gateway   = true

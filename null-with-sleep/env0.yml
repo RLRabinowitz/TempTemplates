@@ -4,7 +4,7 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - echo "KAKI-POOPOO....."
+        - echo "KAKI-POOPOO......"
         - echo $ORG_VAR_1
         - sleep 2
         - echo "Good morning!"

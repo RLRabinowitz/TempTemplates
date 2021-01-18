@@ -4,28 +4,49 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - echo "KAKI-MASTER....."
-        - echo $ORG_VAR_1
+        - echo "Starting"
         - sleep 10
-        - echo "KAKI-MASTER."
+        - echo "IN PROGRESS."
         - sleep 2
-        - echo "KAKI-MASTER.."
+        - echo "IN PROGRESS.."
         - sleep 2
-        - echo "KAKI-MASTER..."
+        - echo "IN PROGRESS..."
         - sleep 2
-        - echo "KAKI-MASTER...."
+        - echo "IN PROGRESS...."
         - sleep 2
-        - echo "KAKI-MASTER....."
+        - echo "IN PROGRESS....."
         - sleep 1
-        - echo "KAKI-MASTER......"
+        - echo "IN PROGRESS......"
         - sleep 1
-        - echo "KAKI-MASTER......."
+        - echo "IN PROGRESS......."
         - sleep 1
-        - echo "KAKI-MASTER........"
+        - echo "IN PROGRESS........"
         - sleep 1
-        - echo "KAKI-MASTER........."
+        - echo "IN PROGRESS........."
         - sleep 1
-        - echo "KAKI-MASTER.........."
+        - echo "IN PROGRESS.........."
         - sleep 1
-        - echo "KAKI-MASTER..........."
+        - echo "IN PROGRESS..........."
+        - sleep 1
+        - echo "IN PROGRESS............"
+        - sleep 1
+        - echo "IN PROGRESS............."
+        - sleep 1
+        - echo "IN PROGRESS.............."
+        - sleep 1
+        - echo "IN PROGRESS..............."
+        - sleep 1
+        - echo "IN PROGRESS................"
+        - sleep 1
+        - echo "IN PROGRESS................."
+        - sleep 1
+        - echo "IN PROGRESS.................."
+        - sleep 1
+        - echo "IN PROGRESS..................."
+        - sleep 1
+        - echo "IN PROGRESS...................."
+        - sleep 1
+        - echo "IN PROGRESS....................."
+        - sleep 1
+        - echo "IN PROGRESS......................"
         - echo "Good morning!"

@@ -6,5 +6,26 @@ deploy:
       after: 
         - echo "KAKI-MASTER....."
         - echo $ORG_VAR_1
+        - sleep 10
+        - echo "KAKI-MASTER."
         - sleep 2
+        - echo "KAKI-MASTER.."
+        - sleep 2
+        - echo "KAKI-MASTER..."
+        - sleep 2
+        - echo "KAKI-MASTER...."
+        - sleep 2
+        - echo "KAKI-MASTER....."
+        - sleep 1
+        - echo "KAKI-MASTER......"
+        - sleep 1
+        - echo "KAKI-MASTER......."
+        - sleep 1
+        - echo "KAKI-MASTER........"
+        - sleep 1
+        - echo "KAKI-MASTER........."
+        - sleep 1
+        - echo "KAKI-MASTER.........."
+        - sleep 1
+        - echo "KAKI-MASTER..........."
         - echo "Good morning!"

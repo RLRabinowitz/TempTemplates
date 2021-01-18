@@ -7,13 +7,13 @@ deploy:
         - echo "Starting"
         - sleep 10
         - echo "IN PROGRESS."
-        - sleep 2
+        - sleep 1
         - echo "IN PROGRESS.."
-        - sleep 2
+        - sleep 1
         - echo "IN PROGRESS..."
-        - sleep 2
+        - sleep 1
         - echo "IN PROGRESS...."
-        - sleep 2
+        - sleep 1
         - echo "IN PROGRESS....."
         - sleep 1
         - echo "IN PROGRESS......"

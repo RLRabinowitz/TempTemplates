@@ -6,5 +6,7 @@ deploy:
       after: 
         - echo "KAKI-MASTER....."
         - echo $ORG_VAR_1
+        - echo $PROJ_VAR_1
+        - echo $ENV_VAR_1
         - sleep 2
         - echo "Good morning!"

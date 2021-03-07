@@ -1,13 +1,9 @@
 version: 1
 
 deploy:
-  steps:
-    setupVariables:
-      after: 
-        - failz
+  onCompletion:
+    - failz
 
 destroy:
-  steps:
-    setupVariables:
-      after: 
-        - failz
+  onCompletion:
+    - failz

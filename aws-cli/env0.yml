@@ -4,4 +4,4 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - aws --version
+        - aws s3 ls

@@ -4,4 +4,4 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - aws lambda list-functions --region=us-east-1 --max-items=5 | grep FunctionName
+        - aws kinesis list-streams --region=us-east-1

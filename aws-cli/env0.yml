@@ -4,4 +4,4 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - aws kinesis list-streams --region=us-east-1
+        - aws s3 list

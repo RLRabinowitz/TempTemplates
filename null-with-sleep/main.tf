@@ -2,8 +2,16 @@ terraform {
   required_version = ">= 0.12.20"
 }
 
-resource "null_resource" "null" {
+# This resource will destroy (potentially immediately) after null_resource.next
+resource "null_resource" "previous" {}
+
+resource "time_sleep" "wait_120_seconds" {
+  depends_on = [null_resource.previous]
+
+  create_duration = "120s"
 }
 
-resource "null_resource" "null2" {
+# This resource will create (at least) 120 seconds after null_resource.previous
+resource "null_resource" "next" {
+  depends_on = [time_sleep.wait_120_seconds]
 }

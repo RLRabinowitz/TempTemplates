@@ -6,5 +6,4 @@ deploy:
       after: 
         - curl -J -O -L https://app.strongdm.com/releases/cli/linux
         - unzip sdmcli*.zip
-        - apk add libc6-compat
         - ./sdm

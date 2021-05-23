@@ -6,6 +6,5 @@ deploy:
       after: 
         - curl -J -O -L https://app.strongdm.com/releases/cli/linux
         - unzip sdmcli*.zip
-        - mv sdm /opt
-        - ls -la /opt
-        - sdm
+        - mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
+        - ./sdm

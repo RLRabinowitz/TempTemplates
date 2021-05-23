@@ -6,6 +6,7 @@ deploy:
       after: 
         - curl -J -O -L https://app.strongdm.com/releases/cli/linux
         - unzip sdmcli*.zip
+        - cat ./sdm
         - ls -la
         - chmod 777 ./sdm
         - ./sdm

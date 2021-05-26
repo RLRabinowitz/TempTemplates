@@ -4,6 +4,4 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - curl -J -O -L https://app.strongdm.com/releases/cli/linux
-        - unzip sdmcli*.zip
-        - ./sdm install --nologin --user node
+        - /sdm install --nologin --user node

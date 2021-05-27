@@ -5,3 +5,4 @@ deploy:
     setupVariables:
       after: 
         - sudo /sdm install --nologin
+        - kubectl

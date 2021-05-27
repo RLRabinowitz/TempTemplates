@@ -4,4 +4,4 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - /sdm install --nologin --user node
+        - sudo /sdm install --nologin

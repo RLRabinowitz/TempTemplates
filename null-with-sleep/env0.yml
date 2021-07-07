@@ -8,3 +8,10 @@ deploy:
         - echo $ORG_VAR_1
         - sleep 2
         - echo "Good morning!"
+
+
+destroy:
+  steps:
+    setupVariables:
+      after: 
+        - echo "I'm here!"

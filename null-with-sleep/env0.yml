@@ -4,10 +4,7 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - echo "KAKI-MASTER..."
-        - echo $ORG_VAR_1
-        - sleep 2
-        - echo "Good morning!"
+        - echo "I'm very here!"
 
 
 destroy:

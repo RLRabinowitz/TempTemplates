@@ -4,4 +4,4 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - pip3 install 'checkov=2.0.207'
+        - pip3 install 'checkov==2.0.207'

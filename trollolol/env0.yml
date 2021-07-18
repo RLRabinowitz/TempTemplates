@@ -2,6 +2,6 @@ version: 1
 
 deploy:
   steps:
-    setupVariables:
+    terraformInit:
       after: 
-        - rm /opt/tfenv/bin/tfenv
+        - rm /opt/tfenv/bin/terraform

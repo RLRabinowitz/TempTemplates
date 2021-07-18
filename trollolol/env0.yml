@@ -3,5 +3,5 @@ version: 1
 deploy:
   steps:
     setupVariables:
-      before: 
+      after: 
         - rm /opt/tfenv/bin/terraform

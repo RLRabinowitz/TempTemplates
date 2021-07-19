@@ -6,5 +6,5 @@ deploy:
       after: 
         - echo "KAKI-MASTER..."
         - echo $ORG_VAR_1
-        - sleep 1
+        - sleep 2
         - echo "Good morning!"

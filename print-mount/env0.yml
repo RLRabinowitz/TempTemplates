@@ -5,5 +5,6 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - ls -lta /mnt/env0/kushield-gke
+        - alias
+        - /bin/ls -lta /mnt/env0/kushield-gke
         

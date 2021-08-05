@@ -5,5 +5,5 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - ls -lta /mnt/env0/kushield-gke | grep 53447971-98b1-4520-8986-c2663a56ca61
+        - ls -lta /mnt/env0/kushield-gke
         

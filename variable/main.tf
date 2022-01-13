@@ -1,5 +1,8 @@
 resource "null_resource" "null" {
 }
 
-variable "myvar" {
+variable "myvar1" {
+}
+
+variable "myvar2" {
 }

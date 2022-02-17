@@ -1,0 +1,7 @@
+version: 1
+
+deploy:
+  steps:
+    terraformOutput:
+      after:
+        - terraform state rm 'null_resource.null1'

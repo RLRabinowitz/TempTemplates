@@ -1,7 +1,7 @@
 version: 1
 
-destroy:
+deploy:
   steps:
     terraformInit:
       after: 
-        - rm /opt/tfenv/bin/terraform
+        - rm $(which infracost)

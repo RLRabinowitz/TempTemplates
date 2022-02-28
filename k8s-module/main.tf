@@ -18,7 +18,7 @@ resource "helm_release" "agent" {
   repository       = "https://env0.github.io/self-hosted"
   timeout          = 600
   values           = [
-    yamlencode(merge(var.env0_values))
+    yamlencode(jsonencode(var.env0_values))
   ]
 }
 

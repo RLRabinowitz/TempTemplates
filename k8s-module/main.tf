@@ -5,6 +5,7 @@ module "prereq" {
     vpc = {
       create = false
       id = var.vpc_id
+      private_subnets = ["172.16.0.0/21", "172.16.16.0/21", "172.16.32.0/21", "172.16.48.0/21", "172.16.64.0/21"]
     }
     efs = {
       create = false

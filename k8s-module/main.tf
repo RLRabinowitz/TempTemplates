@@ -19,6 +19,7 @@ module "prereq" {
     }
     eks = {
       create = true
+      cluster_id = "kaka"
     }
   }
 

@@ -2,6 +2,6 @@ version: 1
 
 deploy:
   steps:
-    terraformInit:
-      after:
+    terraformPlan:
+      before:
         - terraform import module.prereq.module.eks[0].module.eks.kubernetes_config_map.aws_auth[0] kube-system/aws-auth

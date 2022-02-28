@@ -9,6 +9,15 @@ module "prereq" {
     efs = {
       create = false
       id = var.efs_id
+    },
+    autoscaler = {
+      create = true
+    }
+    csi_driver = {
+      create = true
+    }
+    eks = {
+      create = true
     }
   }
 

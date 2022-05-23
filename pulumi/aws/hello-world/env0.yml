@@ -1,0 +1,22 @@
+version: 1
+
+deploy:
+  steps:
+    setupVariables:
+      after:
+        - npm i
+        - ls /opt
+        - ls /
+        - ls .
+        - pwd
+
+destroy:
+  steps:
+    setupVariables:
+      after:
+        - npm i
+        - ls
+        - ls /opt
+        - ls /
+        - ls .
+        - pwd

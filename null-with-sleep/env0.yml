@@ -4,9 +4,4 @@ deploy:
   steps:
     setupVariables:
       after:
-        - rm -rf /opt/pulumi
-        - curl -fsSL https://get.pulumi.com | sh -s -- --version 3.33.1
-        - mv $HOME/.pulumi/bin /opt/pulumi
-        - chmod +x /opt/pulumi
-        - pulumi --version
-        - which pulumi
+        - echo 'Hello Kaki'

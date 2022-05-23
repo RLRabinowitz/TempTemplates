@@ -5,6 +5,9 @@ deploy:
     setupVariables:
       after:
         - which pulumi
-        - rm -rf /opt
+        - rm -rf /opt/pulumi
+        - ls /home
         - echo $HOME
+        - env
+        - ls $HOME
         - echo "Good morning!"

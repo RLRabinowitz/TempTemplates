@@ -4,10 +4,8 @@ deploy:
   steps:
     setupVariables:
       after:
-        - which pulumi
         - rm -rf /opt/pulumi
-        - ls /home
-        - echo $HOME
-        - env
-        - ls $HOME
-        - echo "Good morning!"
+        - which pulumi
+        - curl -fsSL https://get.pulumi.com | sh -s -- --version 3.33.1
+        - pulumi --version
+        - which pulumi

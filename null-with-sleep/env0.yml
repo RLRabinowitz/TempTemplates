@@ -4,7 +4,7 @@ deploy:
   steps:
     setupVariables:
       after:
-        - where pulumi
+        - which pulumi
         - rm -rf /opt
         - echo $HOME
         - echo "Good morning!"

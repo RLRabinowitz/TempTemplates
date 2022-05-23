@@ -5,3 +5,5 @@ deploy:
     setupVariables:
       after:
         - echo 'Hello Kaki'
+        - whoami
+        - whoami

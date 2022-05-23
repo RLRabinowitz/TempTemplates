@@ -6,6 +6,6 @@ deploy:
       after:
         - rm -rf /opt/pulumi
         - curl -fsSL https://get.pulumi.com | sh -s -- --version 3.33.1
-        - mv \$PATH:\$HOME/.pulumi/bin /opt/pulumi
+        - mv $PATH:$HOME/.pulumi/bin /opt/pulumi
         - pulumi --version
         - which pulumi

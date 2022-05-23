@@ -9,5 +9,6 @@ deploy:
         - mv $HOME/.pulumi/bin /opt/pulumi
         - chown -R node /opt/pulumi
         - chmod +x /opt/pulumi
-        - /opt/pulumi/.pulumi/bin/pulumi --version
-        - which pulumi
+        - ls /opt/pulumi/.pulumi
+        - ls /opt/pulumi/.pulumi/bin
+        - ls -R /opt/pulumi/.pulumi

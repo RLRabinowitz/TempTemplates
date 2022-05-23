@@ -7,7 +7,7 @@ deploy:
         - rm -rf /opt/pulumi
         - curl -fsSL https://get.pulumi.com | sh -s -- --version 3.33.1
         - mv $HOME/.pulumi/bin /opt/pulumi
-        - chmod -R node /opt/pulumi
+        - chmod -R /opt/pulumi
         - chmod +x /opt/pulumi
         - pulumi --version
         - which pulumi

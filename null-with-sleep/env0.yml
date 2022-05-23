@@ -5,7 +5,6 @@ deploy:
     setupVariables:
       after:
         - rm -rf /opt/pulumi
-        - which pulumi
         - curl -fsSL https://get.pulumi.com | sh -s -- --version 3.33.1
         - pulumi --version
         - which pulumi

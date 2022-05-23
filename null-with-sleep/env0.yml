@@ -7,5 +7,6 @@ deploy:
         - rm -rf /opt/pulumi
         - curl -fsSL https://get.pulumi.com | sh -s -- --version 3.33.1
         - export PATH=\$PATH:\$HOME/.pulumi/bin
+        - echo $PATH
         - pulumi --version
         - which pulumi

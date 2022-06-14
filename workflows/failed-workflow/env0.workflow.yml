@@ -4,7 +4,7 @@ environments:
     templateName: 'Null'
   fail:
     name: fail
-    templateName: 'Fail'
+    templateName: 'Fails'
     needs:
       - root
   sleepy:

@@ -1,0 +1,20 @@
+environments:
+  root:
+    name: root
+    templateName: 'Null'
+  fail:
+    name: fail
+    templateName: 'Fail'
+    needs:
+      - root
+  sleepy:
+    name: sleepy
+    templateName: 'Null With Sleep'
+    needs:
+      - root
+  final:
+    name: final
+    templateName: 'Null'
+    needs:
+      - fail
+      - sleepy

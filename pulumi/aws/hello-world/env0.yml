@@ -5,10 +5,8 @@ deploy:
     setupVariables:
       after:
         - npm i
-        - ls /opt
-        - ls /
-        - ls .
-        - pwd
+        - rm -rf /opt/pulumi
+        - echo $HOME is my home
 
 destroy:
   steps:

@@ -1,38 +1,38 @@
 environments:
   vpc:
     name: 'VPC and Network'
-    templateName: 'Null'
+    templateName: 'VPC'
   db:
     name: DB
-    templateName: 'Null'
+    templateName: 'DB'
     needs:
       - vpc
   eks:
     name: EKS
-    templateName: 'Null'
+    templateName: 'EKS'
     needs:
       - vpc
   service1:
     name: 'Billing Service'
-    templateName: 'Null'
+    templateName: 'Billing Service'
     needs:
       - db
       - eks
   service2:
     name: 'Configuration Service'
-    templateName: 'Null'
+    templateName: 'Configuration Service'
     needs:
       - db
       - eks
   service3:
     name: 'Notification Service'
-    templateName: 'Null'
+    templateName: 'Notification Service'
     needs:
       - db
       - eks
   dns:
     name: 'DNS and LB'
-    templateName: 'Null'
+    templateName: 'DNS'
     needs:
       - service1
       - service2

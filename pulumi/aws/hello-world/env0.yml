@@ -5,7 +5,6 @@ deploy:
     setupVariables:
       after:
         - npm i
-        - pulumi version
         - echo $HOME is my home
     pulumiLogin:
       before:

@@ -7,7 +7,9 @@ deploy:
         - npm i
         - rm -rf /opt/pulumi
         - echo $HOME is my home
-
+pulumiLogin:
+      before:
+          pulumi version
 destroy:
   steps:
     setupVariables:

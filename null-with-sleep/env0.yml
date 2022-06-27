@@ -5,4 +5,4 @@ deploy:
     setupVariables:
       after:
         - rm -rf /opt/pulumi
-        - echo hello kaka
+        - echo hello kaka123

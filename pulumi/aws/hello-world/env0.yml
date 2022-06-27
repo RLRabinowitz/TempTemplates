@@ -6,9 +6,6 @@ deploy:
       after:
         - npm i
         - echo $HOME is my home
-    pulumiVersion:
-      before:
-        - echo "hara"
     pulumiLogin:
       before:
         - pulumi version

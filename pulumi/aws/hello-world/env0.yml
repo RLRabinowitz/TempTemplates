@@ -6,6 +6,7 @@ deploy:
       after:
         - npm i
         - echo $HOME is my home
+        - echo kaka
     pulumiLogin:
       before:
         - pulumi version

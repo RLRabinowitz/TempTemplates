@@ -1,0 +1,48 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A simple function.
+Parameters:
+  Name:
+    Type: String
+Resources:
+  FunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action:
+              - sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+        Version: "2012-10-17"
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+  Function:
+    Type: AWS::Lambda::Function
+    Properties:
+      Architectures:
+        - x86_64
+      Handler: index.handler
+      Role:
+        Fn::GetAtt:
+          - FunctionRole
+          - Arn
+      Runtime: nodejs16.x
+      Code:
+        ZipFile:
+          Fn::Sub: |
+            exports.handler = async (event, context) => {
+                return {
+                        'statusCode': 200,
+                        'body': JSON.stringify({
+                            message: 'hello world!!! I\'m ${Name}.',
+                        })
+                    };
+            };
+Outputs:
+  FunctionArn:
+    Value:
+      Fn::GetAtt:
+        - Function
+        - Arn

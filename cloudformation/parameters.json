@@ -1,0 +1,6 @@
+[
+  {
+    "ParameterKey": "BucketAccessControl",
+    "ParameterValue": "PublicRead"  
+  }
+]

@@ -1,8 +1,0 @@
-version: 1
-
-deploy:
-  steps:
-    terraformDestroy:
-      before:
-        - echo this is to work around the issue https://github.com/hashicorp/terraform-provider-kubernetes/issues/918
-        - /opt/tfenv/bin/terraform refresh

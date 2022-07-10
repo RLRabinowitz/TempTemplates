@@ -1,7 +1,0 @@
-version: 1
-deploy:
-    steps:
-        setupVariables:
-          after:
-            - pwsh -v
-            - pwsh -Command "& {Write-Output 1,2,3 | Measure-Object}"

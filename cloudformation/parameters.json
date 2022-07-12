@@ -2,5 +2,9 @@
   {
     "ParameterKey": "Kaki",
     "ParameterValue": "somekaki"  
+  },
+  {
+    "ParameterKey": "Kaki",
+    "ParameterValue": "someotherkaki"  
   }
 ]

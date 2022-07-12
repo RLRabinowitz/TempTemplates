@@ -6,7 +6,7 @@ Resources:
   WebsiteBucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName: !Join [!Ref Kaki, ['website-bucket-cf-', !Select [2, !Split ['/', !Ref AWS::StackId]]]]
+      BucketName: !Join ['', ['website-bucket-cf-', !Ref Kaki, !Select [2, !Split ['/', !Ref AWS::StackId]]]]
       AccessControl: 'PublicRead'
       WebsiteConfiguration:
         IndexDocument: index.html

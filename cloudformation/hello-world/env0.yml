@@ -1,0 +1,29 @@
+version: 1
+
+deploy:
+  steps:
+    cfCreateChangeSet:
+      before:
+        - echo deploy-before-cfCreateChangeSet
+      after:
+        - echo deploy-after-cfCreateChangeSet
+
+    cfDeploy:
+      before:
+        - echo deploy-before-cfDeploy
+      after:
+        - echo deploy-after-cfDeploy
+
+destroy:
+  steps:
+    cfListStackResources:
+      before:
+        - echo destroy-before-cfListStackResources
+      after:
+        - echo destroy-after-cfListStackResources
+
+    cfDeleteStack:
+      before:
+        - echo destroy-before-cfDeleteStack
+      after:
+        - echo destroy-after-cfDeleteStack

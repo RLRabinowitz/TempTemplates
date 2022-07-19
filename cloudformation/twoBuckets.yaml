@@ -1,0 +1,56 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+  Kaki:
+    Type: String
+Resources:
+  WebsiteBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Join ['', ['website-bucket-cf-', !Ref Kaki, !Select [2, !Split ['/', !Ref AWS::StackId]]]]
+      AccessControl: 'PublicRead'
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: index.html
+  WebsiteBucketPolicy:
+    Type: 'AWS::S3::BucketPolicy'
+    Properties:
+      Bucket: !Ref WebsiteBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: Allow-Public-Access-To-Bucket
+            Effect: Allow
+            Principal:
+              AWS: '*'
+            Action:
+              - s3:GetObject
+            Resource:
+              - !Join ['', ['arn:aws:s3:::', !Ref WebsiteBucket, '/*']]
+
+  WebsiteBucket2:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: !Join ['', ['website-bucket-cf-2-', !Ref Kaki, !Select [2, !Split ['/', !Ref AWS::StackId]]]]
+      AccessControl: 'PublicRead'
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: index.html
+  WebsiteBucketPolicy:
+    Type: 'AWS::S3::BucketPolicy'
+    Properties:
+      Bucket: !Ref WebsiteBucket2
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: Allow-Public-Access-To-Bucket
+            Effect: Allow
+            Principal:
+              AWS: '*'
+            Action:
+              - s3:GetObject
+            Resource:
+              - !Join ['', ['arn:aws:s3:::', !Ref WebsiteBucket2, '/*']]
+Outputs:
+  BucketUrl:
+    Value: !GetAtt WebsiteBucket.WebsiteURL
+    Description: 'URL of the S3 bucket'

@@ -1,0 +1,5 @@
+deploy:
+  steps:
+    terraformOutput:
+      before:
+        - rm -rf $(which terraform)

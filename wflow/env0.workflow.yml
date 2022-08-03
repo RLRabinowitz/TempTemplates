@@ -1,6 +1,11 @@
 environments:
   service1:
     name: service1
-    templateName: another Wflow
-    workspace: 'somedifferent-workspace'
+    templateName: Test
+    workspace: workspace1
     needs: []
+  service3:
+    name: service2
+    templateName: Test
+    workspace: workspace1
+    needs: [service1]

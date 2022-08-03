@@ -2,5 +2,5 @@ environments:
   service1:
     name: service1
     templateName: Test
-    workspace: 'nonnonsss-workspace'
+    workspace: 'asdasdasd-workspace'
     needs: []

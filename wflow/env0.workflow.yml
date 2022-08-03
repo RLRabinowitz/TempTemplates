@@ -1,0 +1,6 @@
+environments:
+  service1:
+    name: service1
+    templateName: Test
+    workspace: 'somedifferent-workspace'
+    needs: []

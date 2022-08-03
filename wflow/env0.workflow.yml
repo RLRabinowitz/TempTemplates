@@ -1,6 +1,6 @@
 environments:
   service1:
     name: service1
-    templateName: NoTemplate
+    templateName: another Wflow
     workspace: 'somedifferent-workspace'
     needs: []

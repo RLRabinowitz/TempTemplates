@@ -1,11 +1,6 @@
 environments:
-  service1:
-    name: service1
+  service3:
+    name: service3
     templateName: Test
     workspace: workspace
     needs: []
-  service2:
-    name: service2
-    templateName: Test
-    workspace: some
-    needs: [service1]

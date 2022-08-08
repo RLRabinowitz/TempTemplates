@@ -2,10 +2,15 @@ environments:
   service1:
     name: service1
     templateName: Test
-    workspace: another_workspace
+    workspace: for_sure_np
     needs: []
   service2:
     name: service2
     templateName: Test
-    workspace: workspace
+    workspace: another_np
     needs: [service1]
+  service3:
+    name: service3
+    templateName: Test
+    workspace: workspace
+    needs: [service2]

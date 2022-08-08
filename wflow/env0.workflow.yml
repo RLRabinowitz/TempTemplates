@@ -6,6 +6,6 @@ environments:
     needs: []
   service2:
     name: service2
-    templateName: Test
+    templateName: Test2
     workspace: workspace
     needs: [service1]

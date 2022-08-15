@@ -62,6 +62,60 @@ resource "azurerm_app_service" "dockerapp" {
   }
 }
 
+resource "azurerm_resource_group2" "group" {
+  name     = "env0${random_string.random.result}-${var.client_name}-group"
+  location = "northeurope"
+}
+
+resource "azurerm_app_service_plan2" "appserviceplan" {
+  name                = "${azurerm_resource_group.group.name}-plan"
+  location            = "${azurerm_resource_group.group.location}"
+  resource_group_name = "${azurerm_resource_group.group.name}"
+
+  kind = "Linux"
+  reserved = true # Mandatory for Linux plans
+
+  sku {
+    tier = "Basic"
+    size = "B2"
+  }
+}
+resource "azurerm_resource_group3" "group" {
+  name     = "env0${random_string.random.result}-${var.client_name}-group"
+  location = "northeurope"
+}
+
+resource "azurerm_app_service_plan3" "appserviceplan" {
+  name                = "${azurerm_resource_group.group.name}-plan"
+  location            = "${azurerm_resource_group.group.location}"
+  resource_group_name = "${azurerm_resource_group.group.name}"
+
+  kind = "Linux"
+  reserved = true # Mandatory for Linux plans
+
+  sku {
+    tier = "Basic"
+    size = "B2"
+  }
+}
+resource "azurerm_resource_group4" "group" {
+  name     = "env0${random_string.random.result}-${var.client_name}-group"
+  location = "northeurope"
+}
+
+resource "azurerm_app_service_plan4" "appserviceplan" {
+  name                = "${azurerm_resource_group.group.name}-plan"
+  location            = "${azurerm_resource_group.group.location}"
+  resource_group_name = "${azurerm_resource_group.group.name}"
+
+  kind = "Linux"
+  reserved = true # Mandatory for Linux plans
+
+  sku {
+    tier = "Basic"
+    size = "B2"
+  }
+}
 # Outputs 
 
 output "default_site_hostname" {

@@ -62,15 +62,15 @@ resource "azurerm_app_service" "dockerapp" {
   }
 }
 
-resource "azurerm_resource_group2" "group" {
-  name     = "env0${random_string.random.result}-${var.client_name}-group"
+resource "azurerm_resource_group" "group2" {
+  name     = "env0${random_string.random.result}-${var.client_name}-group2"
   location = "northeurope"
 }
 
-resource "azurerm_app_service_plan2" "appserviceplan" {
-  name                = "${azurerm_resource_group.group.name}-plan"
-  location            = "${azurerm_resource_group.group.location}"
-  resource_group_name = "${azurerm_resource_group.group.name}"
+resource "azurerm_app_service_plan" "appserviceplan2" {
+  name                = "${azurerm_resource_group.group2.name}-plan"
+  location            = "${azurerm_resource_group.group2.location}"
+  resource_group_name = "${azurerm_resource_group.group2.name}"
 
   kind = "Linux"
   reserved = true # Mandatory for Linux plans
@@ -80,15 +80,15 @@ resource "azurerm_app_service_plan2" "appserviceplan" {
     size = "B2"
   }
 }
-resource "azurerm_resource_group3" "group" {
-  name     = "env0${random_string.random.result}-${var.client_name}-group"
+resource "azurerm_resource_group" "group3" {
+  name     = "env0${random_string.random.result}-${var.client_name}-group3"
   location = "northeurope"
 }
 
-resource "azurerm_app_service_plan3" "appserviceplan" {
-  name                = "${azurerm_resource_group.group.name}-plan"
-  location            = "${azurerm_resource_group.group.location}"
-  resource_group_name = "${azurerm_resource_group.group.name}"
+resource "azurerm_app_service_plan" "appserviceplan3" {
+  name                = "${azurerm_resource_group.group3.name}-plan"
+  location            = "${azurerm_resource_group.group3.location}"
+  resource_group_name = "${azurerm_resource_group.group3.name}"
 
   kind = "Linux"
   reserved = true # Mandatory for Linux plans
@@ -98,15 +98,15 @@ resource "azurerm_app_service_plan3" "appserviceplan" {
     size = "B2"
   }
 }
-resource "azurerm_resource_group4" "group" {
-  name     = "env0${random_string.random.result}-${var.client_name}-group"
+resource "azurerm_resource_group" "group4" {
+  name     = "env0${random_string.random.result}-${var.client_name}-group4"
   location = "northeurope"
 }
 
-resource "azurerm_app_service_plan4" "appserviceplan" {
-  name                = "${azurerm_resource_group.group.name}-plan"
-  location            = "${azurerm_resource_group.group.location}"
-  resource_group_name = "${azurerm_resource_group.group.name}"
+resource "azurerm_app_service_plan" "appserviceplan4" {
+  name                = "${azurerm_resource_group.group4.name}-plan"
+  location            = "${azurerm_resource_group.group4.location}"
+  resource_group_name = "${azurerm_resource_group.group4.name}"
 
   kind = "Linux"
   reserved = true # Mandatory for Linux plans

@@ -1,1 +1,0 @@
-terraform import module.databases[docdb_security_group].aws_security_group sg-0ea656088dfa26735

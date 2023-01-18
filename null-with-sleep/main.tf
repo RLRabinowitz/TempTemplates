@@ -3,7 +3,7 @@ terraform {
 }
 
 resource "null_resource" "null" {
-  count=var.COUNT
+  count=tonumber(var.COUNT)
 }
 
 resource "null_resource" "null2" {

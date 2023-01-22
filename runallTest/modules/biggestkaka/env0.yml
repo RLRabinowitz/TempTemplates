@@ -1,0 +1,7 @@
+version: 1
+
+deploy:
+  steps:
+    terraformPlan:
+      after:
+        - cat runallTest/modules/env0_tf_plan.json

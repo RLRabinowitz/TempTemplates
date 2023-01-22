@@ -1,5 +1,7 @@
 version: 1
-    steps:
-      terraformPlan:
-        after:
-          - cat runallTest/modules/env0_tf_plan.json
+
+deploy:
+  steps:
+    terraformPlan:
+      after:
+        - cat runallTest/modules/env0_tf_plan.json

@@ -1,5 +1,8 @@
 module "module" {
   source = "../../bucket"
+  providers = {
+    aws = aws
+   }
 }
 
 output "bucket_name" {

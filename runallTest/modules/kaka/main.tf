@@ -1,5 +1,5 @@
 module "module" {
-  source = "../resources"
+  source = "../../resources"
   trigger = "zero"
 }
 

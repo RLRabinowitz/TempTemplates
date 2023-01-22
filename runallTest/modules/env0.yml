@@ -4,4 +4,4 @@ deploy:
   steps:
     terraformPlan:
       after:
-        - cat runallTest/modules/env0_tf_plan.json
+        - cat env0_tf_plan.json

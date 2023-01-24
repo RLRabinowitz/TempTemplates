@@ -11,6 +11,10 @@ resource "aws_s3_bucket" "website_bucket" {
   acl    = "public-read"
 
   force_destroy = true 
+  
+  versioning {
+    enabled = true
+  }
 }
 
 output "bucket_name" {

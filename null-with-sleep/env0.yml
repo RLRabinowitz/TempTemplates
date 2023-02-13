@@ -4,4 +4,4 @@ deploy:
   steps:
     setupVariables:
       after: 
-        - echo "Good morning!"
+        - echo "Good morning!!"

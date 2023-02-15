@@ -1,7 +1,7 @@
 environments:
   root:
     name: root
-    templateName: 'Null'
+    templateName: 'Null''
   leaf1:
     name: leaf1
     templateName: 'Null'

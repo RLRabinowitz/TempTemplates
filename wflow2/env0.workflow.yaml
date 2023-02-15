@@ -3,5 +3,5 @@ environments:
     name: service3
     templateName: Test
     workspace: workspace
-    needs: [service4]
+    needs: []
     

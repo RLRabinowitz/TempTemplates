@@ -5,3 +5,9 @@ deploy:
     setupVariables:
       after: 
         - node -e "console.log(JSON.parse(Buffer.from(process.env.ENV0_OIDC_TOKEN.split('.')[1], 'base64')));"
+        
+destroy:
+  steps:
+    setupVariables:
+      after: 
+        - node -e "console.log(JSON.parse(Buffer.from(process.env.ENV0_OIDC_TOKEN.split('.')[1], 'base64')));"

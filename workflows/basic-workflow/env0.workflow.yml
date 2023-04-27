@@ -12,5 +12,3 @@ environments:
     templateName: 'Null'
     needs:
       - root
-
-

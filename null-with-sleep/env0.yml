@@ -5,5 +5,5 @@ deploy:
     setupVariables:
       after: 
         - echo "KAKI-MASTER....."
-        - sleep 120
+        - sleep 3600
         - echo "Good morning!"

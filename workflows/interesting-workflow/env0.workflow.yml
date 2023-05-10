@@ -3,28 +3,33 @@ environments:
     name: root
     templateName: 'Null'
     workspace: ${WS}1
+    revision: fail
   mid:
     name: mid
     templateName: 'Null'
     workspace: ${WS}2
+    revision: fail
     needs:
       - root
   fork1:
     name: fork1
     templateName: 'Null'
     workspace: ${WS}3
+    revision: fail
     needs:
       - mid
   fork2:
     name: fork2
     templateName: 'Null'
     workspace: ${WS}4
+    revision: fail
     needs:
       - mid
   leaf:
     name: leaf
     templateName: 'Null'
     workspace: ${WS}5
+    revision: fail
     needs:
       - fork1
       - fork2

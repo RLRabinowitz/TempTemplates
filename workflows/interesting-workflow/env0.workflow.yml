@@ -2,29 +2,29 @@ environments:
   root:
     name: root
     templateName: 'Null'
-    workspaceName: ${WS}1
+    workspace: ${WS}1
   mid:
     name: mid
     templateName: 'Null'
-    workspaceName: ${WS}2
+    workspace: ${WS}2
     needs:
       - root
   fork1:
     name: fork1
     templateName: 'Null'
-    workspaceName: ${WS}3
+    workspace: ${WS}3
     needs:
       - mid
   fork2:
     name: fork2
     templateName: 'Null'
-    workspaceName: ${WS}4
+    workspace: ${WS}4
     needs:
       - mid
   leaf:
     name: leaf
     templateName: 'Null'
-    workspaceName: ${WS}5
+    workspace: ${WS}5
     needs:
       - fork1
       - fork2

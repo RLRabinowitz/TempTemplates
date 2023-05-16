@@ -10,4 +10,4 @@ destroy:
   steps:
     setupVariables:
       after: 
-        - failz
+        - if [[ "$ENV0_WORKSPACE_NAME" != "HHHH5" ]]; then failz; fi

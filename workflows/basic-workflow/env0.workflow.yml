@@ -12,3 +12,8 @@ environments:
     templateName: 'Null'
     needs:
       - root
+  leaf3:
+    name: leaf3
+    templateName: 'Null'
+    needs:
+      - root

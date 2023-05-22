@@ -1,6 +1,3 @@
-variable "var" {
-  default = ""
-}
 
 resource "null_resource" "cluster" {
  triggers = {

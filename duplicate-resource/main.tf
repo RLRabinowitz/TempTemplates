@@ -1,3 +1,5 @@
+variable "count" {
+}
 resource "null_resource" "name" {
   count = 1
   triggers = {
@@ -7,7 +9,7 @@ resource "null_resource" "name" {
 
 resource "null_resource" "name" {
 
-  count = 2
+  count = var.count
   triggers = {
     timestamp = "${timestamp()}-2"
   }

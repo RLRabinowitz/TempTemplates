@@ -1,3 +1,4 @@
+
 resource "null_resource" "name" {
   count = 1
   triggers = {
@@ -5,8 +6,7 @@ resource "null_resource" "name" {
   }
 }
 
-resource "null_resource" "name" {
-
+resource "null_resource" "name2" {
   count = 2
   triggers = {
     timestamp = "${timestamp()}-2"

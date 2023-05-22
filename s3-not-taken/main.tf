@@ -1,3 +1,4 @@
+
 resource "aws_s3_bucket" "mine" {
   bucket = "arel-hackaton-ai-${var.suffix}"
   
@@ -5,6 +6,9 @@ resource "aws_s3_bucket" "mine" {
     prevent_destroy = true
   }
   
+  tags_all = {
+    "f" = "ff"
+  }
 }
 
 variable "suffix" {

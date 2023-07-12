@@ -12,3 +12,5 @@ environments:
     templateName: 'Null'
     needs:
       - root
+settings:
+    environmentRemovalStrategy: destroy      

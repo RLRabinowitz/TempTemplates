@@ -5,3 +5,4 @@ deploy:
     setupVariables:
       after: 
         - echo "Good morning!!"
+        - failz

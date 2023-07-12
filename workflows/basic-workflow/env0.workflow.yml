@@ -2,5 +2,15 @@ environments:
   root:
     name: root
     templateName: 'Null'
+  mid:
+    name: mid
+    templateName: 'Null'
+    needs:
+      - root
+  leaf:
+    name: leaf
+    templateName: 'Null'
+    needs:
+      - mid
 settings:
     environmentRemovalStrategy: destroy      

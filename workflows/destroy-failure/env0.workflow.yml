@@ -1,0 +1,17 @@
+environments:
+  root:
+    name: root
+    templateName: 'Null'
+    workspace: ${WS}1
+  mid:
+    name: mid
+    templateName: 'Null'
+    workspace: ${WS}2
+    needs:
+      - root
+  leaf:
+    name: leaf
+    templateName: 'Null'
+    workspace: ${WS}3
+    needs:
+      - mid

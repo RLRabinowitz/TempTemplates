@@ -10,4 +10,4 @@ destroy:
   steps:
     setupVariables:
       after: 
-        - if [[ "$ENV0_WORKSPACE_NAME" == *3 ]]; then failz; fi
+        - if [[ "$ENV0_WORKSPACE_NAME" == *2 ]]; then failz; fi

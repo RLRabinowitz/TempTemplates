@@ -8,3 +8,7 @@ deploy:
         - ls -a
         - mkdir -p ~/.terraform.d/plugins/tideworks-terraform-provider-dev.tideworks.io/tideworks/buoy/1.0.3/linux_amd64
         - cp terraform-provider-buoy_v1.0.3 ~/.terraform.d/plugins/tideworks-terraform-provider-dev.tideworks.io/tideworks/buoy/1.0.3/linux_amd64
+    terraformInit:
+      after:
+        - ls -R .terraform/providers/tideworks-terraform-provider-dev.tideworks.io/tideworks/buoy/1.0.3
+        - terraform .terraform/providers/tideworks-terraform-provider-dev.tideworks.io/tideworks/buoy/1.0.3/linux_amd64/terraform-provider-buoy_v1.0.3 init

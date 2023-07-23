@@ -7,6 +7,7 @@ terraform {
   }
 }
 
-
+resource "buoy_server" "sksk" {
+}
 resource "null_resource" "tidyWidy" {
 }

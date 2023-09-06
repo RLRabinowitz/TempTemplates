@@ -1,5 +1,8 @@
 provider "azurerm" {
-  version = "~> 1.15"
+  version = "3.28.0"
+  features {
+
+  }
 }
 
 # Vars
@@ -15,9 +18,9 @@ variable "client_logo_url" {
 # Resources
 
 resource "random_string" "random" {
-  length = 4
+  length  = 4
   special = false
-  upper = false
+  upper   = false
 }
 
 resource "azurerm_resource_group" "group" {
@@ -25,31 +28,26 @@ resource "azurerm_resource_group" "group" {
   location = "northeurope"
 }
 
-resource "azurerm_app_service_plan" "appserviceplan" {
+resource "azurerm_service_plan" "appserviceplan" {
   name                = "${azurerm_resource_group.group.name}-plan"
-  location            = "${azurerm_resource_group.group.location}"
-  resource_group_name = "${azurerm_resource_group.group.name}"
+  location            = azurerm_resource_group.group.location
+  resource_group_name = azurerm_resource_group.group.name
+  os_type             = "Linux"
 
-  kind = "Linux"
-  reserved = true # Mandatory for Linux plans
-
-  sku {
-    tier = "Basic"
-    size = "B2"
-  }
+  sku_name = "P1v2"
 }
 
 resource "azurerm_app_service" "dockerapp" {
   name                = "${azurerm_resource_group.group.name}-app"
-  location            = "${azurerm_resource_group.group.location}"
-  resource_group_name = "${azurerm_resource_group.group.name}"
-  app_service_plan_id = "${azurerm_app_service_plan.appserviceplan.id}"
+  location            = azurerm_resource_group.group.location
+  resource_group_name = azurerm_resource_group.group.name
+  app_service_plan_id = azurerm_service_plan.appserviceplan.id
 
   # Do not attach Storage by default
   app_settings = {
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = false
-    CLIENT_NAME = "${var.client_name}"
-    CLIENT_LOGO_URL = "${var.client_logo_url}"
+    CLIENT_NAME                         = "${var.client_name}"
+    CLIENT_LOGO_URL                     = "${var.client_logo_url}"
   }
 
   site_config {
@@ -65,5 +63,5 @@ resource "azurerm_app_service" "dockerapp" {
 # Outputs 
 
 output "default_site_hostname" {
-  value = "${azurerm_app_service.dockerapp.default_site_hostname}"
+  value = azurerm_app_service.dockerapp.default_site_hostname
 }

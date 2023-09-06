@@ -3,6 +3,9 @@ provider "azurerm" {
   features {
 
   }
+
+  subscription_id = "88044971-f276-44a3-9296-b9150d5ac53d"
+  tenant_id       = "58548da8-4c67-4ef0-87bb-8b9345b6ab0e"
 }
 
 # Vars

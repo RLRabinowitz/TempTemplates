@@ -28,7 +28,7 @@ resource "random_string" "random" {
 
 resource "azurerm_resource_group" "group" {
   name     = "env0${random_string.random.result}-${var.client_name}-group"
-  location = "Central US"
+  location = "northeurope"
 }
 
 resource "azurerm_service_plan" "appserviceplan" {

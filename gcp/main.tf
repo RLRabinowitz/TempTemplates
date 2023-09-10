@@ -6,7 +6,7 @@ provider "google" {
 }
 
 resource "google_compute_instance" "google-i128" {
-  name         = "gcp-test-test"
+  name         = "gcp-test-test2"
   machine_type = "n2-standard-128"
 
   boot_disk {

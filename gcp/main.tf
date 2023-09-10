@@ -5,7 +5,7 @@ provider "google" {
 
 }
 
-resource "google_compute_instance" "google-i" {
+resource "google_compute_instance" "google-i128" {
   name         = "gcp-test-test"
   machine_type = "n2-standard-128"
 

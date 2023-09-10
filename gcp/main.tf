@@ -1,7 +1,6 @@
 provider "google" {
   project = "env0project"
-  region  = "us-east1"
-  zone    = "us-east1-b"
+  region  = "us-west1"
 }
 
 resource "google_compute_instance" "google-i" {

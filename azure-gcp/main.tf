@@ -78,7 +78,7 @@ provider "google" {
 
 resource "google_compute_instance" "google-i128" {
   name         = "gcp-test-test2"
-  machine_type = "n2-standard-128"
+  machine_type = "n2-standard-8"
 
   boot_disk {
     initialize_params {

@@ -1,5 +1,5 @@
 provider "google" {
-  project = "env0project"
+  project = "cool-reserve-398319"
   region  = "us-west1"
   zone  = "us-west1-a"
 

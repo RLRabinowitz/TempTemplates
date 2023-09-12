@@ -1,13 +1,13 @@
 provider "google" {
-  project = "cool-reserve-398319"
+  project = "env0project"
   region  = "us-west1"
   zone  = "us-west1-a"
 
 }
 
-resource "google_compute_instance" "google-i8" {
-  name         = "gcp-test-test8"
-  machine_type = "n2-standard-8"
+resource "google_compute_instance" "google-i1" {
+  name         = "gcp-test-test1"
+  machine_type = "n1-standard-1"
 
   boot_disk {
     initialize_params {

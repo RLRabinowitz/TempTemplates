@@ -4,3 +4,7 @@ environments:
     templateName: Test
     workspace: workspace
     needs: []
+  service2:
+    name: service2
+    templateName: wflow2
+    needs: [service1]

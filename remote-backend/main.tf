@@ -2,8 +2,6 @@ variable "organizationId" {}
 variable "backendHost" {
   default = "backend-dev.api.dev.env0.com"
 }
-# Defined in the env0.yml
-variable "randomEnv" {}
 
 terraform {
   backend "remote" {

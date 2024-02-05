@@ -28,3 +28,21 @@ environments:
     needs:
       - fork1
       - fork2
+  leaf2:
+    name: leaf2
+    templateName: 'Null'
+    workspace: ${WS}6
+    needs:
+      - fork1
+      - fork2
+      - leaf
+  shirly:
+    name: shirly
+    templateName: 'Null'
+    workspace: >
+      shirly
+      is
+      shirly
+    needs:
+      - mid
+    

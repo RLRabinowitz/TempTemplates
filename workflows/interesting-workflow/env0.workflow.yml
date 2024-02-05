@@ -36,13 +36,4 @@ environments:
       - fork1
       - fork2
       - leaf
-  shirly:
-    name: shirly
-    templateName: 'Null'
-    workspace: >
-      shirly
-      is
-      shirly
-    needs:
-      - mid
     

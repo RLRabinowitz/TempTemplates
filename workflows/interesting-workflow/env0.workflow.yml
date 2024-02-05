@@ -72,5 +72,4 @@ environments:
     workspace: ${WS}12
     needs:
       - newbie1
-      - anotherther
     

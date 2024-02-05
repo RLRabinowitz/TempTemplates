@@ -60,4 +60,10 @@ environments:
     workspace: ${WS}10
     needs:
       - newbie2
+  newbie4:
+    name: newbie4
+    templateName: 'Null'
+    workspace: ${WS}11
+    needs:
+      - newbie3
     

@@ -73,4 +73,11 @@ environments:
     workspace: ${WS}12
     needs:
       - newbie1
+      - anotherther
+   anotherther:
+    name: anotherther
+    templateName: 'Null'
+    workspace: ${WS}13
+    needs:
+      - newbie1
     

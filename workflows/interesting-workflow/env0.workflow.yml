@@ -48,6 +48,7 @@ environments:
     workspace: ${WS}8
     needs:
       - mid
+      - newbie4
   newbie2:
     name: newbie2
     templateName: 'Null'

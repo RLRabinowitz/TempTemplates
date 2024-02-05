@@ -42,4 +42,22 @@ environments:
     workspace: ${WS}7
     needs:
       - mid
+  newbie1:
+    name: newbie1
+    templateName: 'Null'
+    workspace: ${WS}8
+    needs:
+      - mid
+  newbie2:
+    name: newbie2
+    templateName: 'Null'
+    workspace: ${WS}9
+    needs:
+      - newbie1
+  newbie3:
+    name: newbie3
+    templateName: 'Null'
+    workspace: ${WS}10
+    needs:
+      - newbie2
     

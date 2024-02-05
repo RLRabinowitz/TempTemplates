@@ -36,4 +36,10 @@ environments:
       - fork1
       - fork2
       - leaf
+  feal:
+    name: feal
+    templateName: 'Null'
+    workspace: ${WS}7
+    needs:
+      - mid
     

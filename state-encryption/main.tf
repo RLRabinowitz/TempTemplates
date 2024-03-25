@@ -4,7 +4,7 @@ variable "passphrase" {
 terraform {
   encryption {
     key_provider "pbkdf2" "foo" {
-      passphrase = var.passphrase
+      passphrase = "codededucodededu"
     }
 
     method "aes_gcm" "bar" {

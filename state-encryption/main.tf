@@ -12,17 +12,17 @@ terraform {
     }
 
     state {
-      method = method.aes_gcm.bar
-      fallback {
+      #method = method.aes_gcm.bar
+      #fallback {
         # The empty fallback block allows reading unencrypted state files.
-      }
+      #}
     }
 
     plan {
-      method = method.aes_gcm.bar
-      fallback {
+      #method = method.aes_gcm.bar
+      #fallback {
         # The empty fallback block allows reading unencrypted state files.
-      }
+      #}
     }
   }
 }

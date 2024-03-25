@@ -12,16 +12,16 @@ terraform {
     }
 
     state {
-      #method = method.aes_gcm.bar
+      method = method.aes_gcm.bar
       fallback {
-        method = method.aes_gcm.bar
+        #method = method.aes_gcm.bar
       }
     }
 
     plan {
-      #method = method.aes_gcm.bar
+      method = method.aes_gcm.bar
       fallback {
-        method = method.aes_gcm.bar
+        #method = method.aes_gcm.bar
       }
     }
   }

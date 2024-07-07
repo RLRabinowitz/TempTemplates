@@ -5,4 +5,7 @@ deploy:
     setupVariables:
       after: 
         - echo "Good morning!!"
+
+    terraformInit:
+      before:
         - /opt/tfenv/bin/terraform workspace select $ENV0_WORKSPACE_NAME

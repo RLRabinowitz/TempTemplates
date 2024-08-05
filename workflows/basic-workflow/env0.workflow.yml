@@ -16,4 +16,4 @@ environments:
     needs:
       - root
 settings:
-	environmentRemovalStrategy: destroy
+  environmentRemovalStrategy: destroy

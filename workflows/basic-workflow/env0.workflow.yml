@@ -4,4 +4,4 @@ environments:
     templateName: 'Null'
     workspace: ${WS}1
 settings:
-	environmentRemovalStrategy: destroy
+  environmentRemovalStrategy: destroy

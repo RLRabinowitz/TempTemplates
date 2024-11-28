@@ -5,4 +5,4 @@ task:
     setupVariables:
       after:
         - name: Setup Credentials
-          run: echo 'Credentials for task successfully set!
+          run: echo 'Credentials for task successfully set!'

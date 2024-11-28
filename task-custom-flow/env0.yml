@@ -1,0 +1,8 @@
+version: 2
+
+task:
+  steps:
+    setupVariables:
+      after:
+        - name: Setup Credentials
+          run: echo 'Credentials for task successfully set!

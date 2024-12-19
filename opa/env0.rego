@@ -6,3 +6,5 @@ package env0
 pending[format(rego.metadata.rule())] {
     count([email | email := input.approvers[_].email; email != input.deployerUser.email]) < 1
 }
+
+format(meta) := meta.description

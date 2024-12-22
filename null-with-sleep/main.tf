@@ -7,3 +7,7 @@ resource "null_resource" "null" {
 
 resource "null_resource" "null2" {
 }
+
+output "myoutput" {
+  value = null_resource.null1.id
+}

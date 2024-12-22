@@ -6,8 +6,5 @@ resource "null_resource" "null" {
 }
 resource "null_resource" "null3" {
 }
-output "kaka" {
-  value = null_resource.null.id
-}
 EOF
 }

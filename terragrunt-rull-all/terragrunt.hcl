@@ -4,5 +4,8 @@ generate "null_resource" {
   contents = <<EOF
 resource "null_resource" "null" {
 }
+output "a"{
+  value = null_resource.null.id
+}
 EOF
 }

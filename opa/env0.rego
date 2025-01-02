@@ -23,5 +23,5 @@ allow[format(rego.metadata.rule())] {
 #}
 
 approvers := [email | email := input.approvers[_].email; email != input.deployerUser.email]
-
+;;;
 format(meta) := meta.description

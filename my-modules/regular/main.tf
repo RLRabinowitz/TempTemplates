@@ -1,6 +1,6 @@
-module "regular" {
-  source = "api-pr17766.dev.env0.com/fbb66da9-d3c2-491d-bb14-0833e6a8b218/regular/one"
-  version = "1.0.2"
+module "ff" {
+  source = "api-pr17886.dev.env0.com/1c8bfa5d-006e-4423-a4a6-ef921b41c7a2/ff/aaa"
+  version = "3.0.969"
 }
 
 resource "null_resource" "null" {}

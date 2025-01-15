@@ -5,6 +5,7 @@ deploy:
     setupVariables:
       after:
         - echo "poop"
+        - curl https://api.github.com/rate_limit
         - curl -H "Authorization: Bearer $TOFUENV_GITHUB_TOKEN" -X GET https://api.github.com/rate_limit
         - curl -H "Authorization: Bearer $TOFUENV_GITHUB_TOKEN" -X GET https://api.github.com/rate_limit
 

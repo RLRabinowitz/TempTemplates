@@ -5,13 +5,13 @@ deploy:
     setupVariables:
       after:
         name: Print Before
-        run: |
+        run: |-
           - echo "poop"
-        #  - curl -H "Authorization: Bearer $TOFUENV_GITHUB_TOKEN" -X GET https://api.github.com/rate_limit
+          - curl -H "Authorization: Bearer $TOFUENV_GITHUB_TOKEN" -X GET https://api.github.com/rate_limit
 
     opentofuInit:
       after:
         name: Print After
-        run: |
+        run: |-
           - echo "poop"
           - curl -H "Authorization: Bearer $TOFUENV_GITHUB_TOKEN" -X GET https://api.github.com/rate_limit

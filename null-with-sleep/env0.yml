@@ -6,8 +6,10 @@ deploy:
       after:
         - echo "poop"
         - curl -H "Authorization: Bearer $TOFUENV_GITHUB_TOKEN" -X GET https://api.github.com/rate_limit
+        - curl -H "Authorization: Bearer $TOFUENV_GITHUB_TOKEN" -X GET https://api.github.com/rate_limit
 
     opentofuInit:
       after:
         - echo "poop"
+        - curl -H "Authorization: Bearer $TOFUENV_GITHUB_TOKEN" -X GET https://api.github.com/rate_limit
         - curl -H "Authorization: Bearer $TOFUENV_GITHUB_TOKEN" -X GET https://api.github.com/rate_limit

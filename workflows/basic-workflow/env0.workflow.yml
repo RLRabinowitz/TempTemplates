@@ -3,6 +3,8 @@ environments:
     name: root
     templateName: 'Null'
     workspace: ${WS}1
+    needs:
+      - leaf1
   leaf1:
     name: leaf1
     templateName: 'Null'

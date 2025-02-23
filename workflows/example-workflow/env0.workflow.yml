@@ -18,15 +18,3 @@ environments:
     needs:
       - db
       - eks
-  service2:
-    name: 'Configuration Service'
-    templateName: 'Service'
-    needs:
-      - db
-      - eks
-  service3:
-    name: 'Notification Service'
-    templateName: 'Service'
-    needs:
-      - db
-      - eks

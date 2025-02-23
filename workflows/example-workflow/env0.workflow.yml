@@ -1,7 +1,7 @@
 environments:
   vpc:
     name: 'VPC and Network'
-    templateName: 'VPC'
+    templateName: 'Null'
   db:
     name: DB
     templateName: 'DB'

@@ -12,6 +12,7 @@ resource "null_resource" "null3" {
 }
 
 resource "null_resource" "null7" 
+
 }
 
 output "null_id" {

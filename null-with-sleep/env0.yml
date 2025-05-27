@@ -5,3 +5,9 @@ deploy:
     setupVariables:
       after: 
         - echo "Good morning!!!x"
+
+destroy:
+  steps:
+    setupVariables:
+      after: 
+        - exit 1

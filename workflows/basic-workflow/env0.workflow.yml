@@ -3,15 +3,14 @@ environments:
     name: root
     templateName: 'Null'
     workspace: ${WS}1
+    needs:
+      - leaf1
+      - leaf2
   leaf1:
     name: leaf1
     templateName: 'Null'
     workspace: ${WS}2
-    needs:
-      - root
   leaf2:
     name: leaf2
     templateName: 'Null'
     workspace: ${WS}3
-    needs:
-      - root

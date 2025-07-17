@@ -3,10 +3,12 @@ environments:
     name: root
     templateName: 'Null'
     workspace: ${WS}1
+    requiresApproval: true
   leaf1:
     name: leaf1
     templateName: 'Null'
     workspace: ${WS}2
+    requiresApproval: false
     needs:
       - root
   leaf2:

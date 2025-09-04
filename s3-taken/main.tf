@@ -4,5 +4,8 @@ resource "aws_s3_bucket" "mine" {
   lifecycle {
     prevent_destroy = true
   }
-  
+
+  tags = {
+    Environment = "Dev"
+  }
 }

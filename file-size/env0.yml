@@ -5,23 +5,23 @@ deploy:
     opentofuInit:
       before:
         - name: Try before init
-          run: du -h -d 1 \"$ENV0_ROOT_DIR\" | sort -hr
+          run: du -h -d 1 "$ENV0_ROOT_DIR" | sort -hr
     opentofuPlan:
       before:
         - name: Try before plan
-          run: du -h -d 1 \"$ENV0_ROOT_DIR\" | sort -hr
+          run: du -h -d 1 "$ENV0_ROOT_DIR" | sort -hr
 
     opentofuApply:
       before:
         - name: Try before apply
-          run: du -h -d 1 \"$ENV0_ROOT_DIR\" | sort -hr
+          run: du -h -d 1 "$ENV0_ROOT_DIR" | sort -hr
 
     storeState:
       before:
         - name: Try before store
-          run: du -h -d 1 \"$ENV0_ROOT_DIR\" | sort -hr
+          run: du -h -d 1 "$ENV0_ROOT_DIR" | sort -hr
 
     opentofuOutput:
       before:
         - name: Try before output
-          run: du -h -d 1 \"$ENV0_ROOT_DIR\" | sort -hr
+          run: du -h -d 1 "$ENV0_ROOT_DIR" | sort -hr

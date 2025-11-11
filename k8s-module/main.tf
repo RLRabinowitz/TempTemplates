@@ -1,5 +1,5 @@
 module "prereq" {
-  source = "github.com/env0/k8s-modules//aws"
+  source = "github.com/env0/k8s-modules//aws?ref=v1.0.0"
 
   region = "us-east-1"
   cluster_name = "arel-shld-cluster"

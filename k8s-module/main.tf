@@ -68,5 +68,7 @@ terraform {
 }
 
 variable "env0_values" {}
-variable "vpc_id" {}
+variable "vpc_id" {
+  type = string
+}
 variable "efs_id" {}

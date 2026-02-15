@@ -6,7 +6,7 @@ resource "aws_s3_bucket" "mine" {
   }
 
   tags = {
-    MyTag = "Taggy"
+    MyTag = "Shaggy"
   }
   
 }

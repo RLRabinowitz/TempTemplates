@@ -1,3 +1,4 @@
+hcl
 resource "aws_s3_bucket" "mine" {
   bucket = "arel-hackaton-ai-${var.suffix}"
   
@@ -6,7 +7,7 @@ resource "aws_s3_bucket" "mine" {
   }
 
   tags = {
-    MyTag = "Taggy"
+    MyTag = "Shaggy"
   }
   
 }

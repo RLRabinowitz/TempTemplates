@@ -1,3 +1,4 @@
+hcl
 resource "aws_s3_bucket" "mine" {
   bucket = "arel-hackaton-ai-${var.suffix}"
   
@@ -6,11 +7,12 @@ resource "aws_s3_bucket" "mine" {
   }
 
   tags = {
-    MyTag = "Taggy"
+    MyTag = "Shaggy"
   }
   
 }
 
+hcl
 resource "aws_s3_bucket" "mine2" {
   bucket = "arel-hackaton-ai-${var.suffix}-2"
   
@@ -19,7 +21,7 @@ resource "aws_s3_bucket" "mine2" {
   }
 
   tags = {
-    MyTag = "Taggy"
+    MyTag = "Shaggy"
   }
   
 }

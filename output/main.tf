@@ -3,5 +3,5 @@ resource "random_string" "rand" {
 }
 
 output "my_random_string" {
-  value = random_string.rand.result
+  value = "static"
 }
